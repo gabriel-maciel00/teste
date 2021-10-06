@@ -1,12 +1,36 @@
 
    function mostrarLegenda()
    {
-      var git = document.getElementById("git");
-     var git-fomdocument.getElementById("git-form").style.display = 'block';
+      var git = document.getElementById("open");
+     var form1= document.getElementById("form1");
       
-      if (git.style.display == 'none') {
-        git.style.display = 'block';
+      if (form1.style.display == 'none') {
+        form1.style.display = 'block';
     } else {
-        git.style.display = 'none';
+        form1.style.display = 'none';
     }
    }
+
+  
+   function cadastro(){
+       var nome = document.getElementById('nome');
+       var endereco = document.getElementById('endereco');
+
+       var dados = JSON.parse(localStorage.getItem('dadosP'));
+
+       if(dados == null){
+           localStorage.setItem("dados, []");
+           dados =[];
+       } 
+       var auxRegistro ={
+           nome: nome.value,
+           endereco: endereco.value
+       }
+
+       dados.push(auxRegistro);
+       localStorage.setItem("dadosP", JSON.stringify(dados));
+       alert('Registro incluido')
+   }
+
+   
+   

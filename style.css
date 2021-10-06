@@ -52,7 +52,7 @@
     background-color: rgb(0, 128, 17);
     border-radius: 10px;
 }
-.git-form{
+.form1{
     color: white;
     text-align: center;
     width: 70%;
@@ -68,6 +68,7 @@ input{
     border-radius: 10px;
     height: 25px;
     
+    
 }
 button{
     width: 70%;
@@ -76,6 +77,16 @@ button{
     border-radius: 10px;
 }
 
+@media (max-width:780px){
+    .container{
+        width: 60%;
+
+    }
+    .perfil{
+        transform: translateY(-90px);
+    
+}
+}
 
 
 
